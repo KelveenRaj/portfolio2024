@@ -1,5 +1,7 @@
 {
+    "logo": "KR",
     "name": "Kelveen Raj",
-    "hello": "Hello, I'm",
+    "hello": "Hello, I'm Kelveen.",
+    "info": "A full-stack developer based in Malaysia",
     "role": "Fullstack Developer"
 }

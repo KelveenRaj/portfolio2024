@@ -19,10 +19,10 @@ const Navbar = (props) => {
   const { path } = props;
   return (
     <Box
-      position="fixed"
-      as="nav"
+      as="header"
       w="100%"
       bg={"blackAlpha.50"}
+      padding={"4rem 1rem"}
       style={{ backdropFilter: "blur(10px)" }}
       zIndex={1}
       {...props}
@@ -46,9 +46,6 @@ const Navbar = (props) => {
           flexGrow={1}
           mt={{ base: 4, nmd: 0 }}
         >
-          <LinkItem href="/works" path={path}>
-            Works
-          </LinkItem>
           <LinkItem href="/test" path={path}>
             Test
           </LinkItem>
@@ -58,16 +55,16 @@ const Navbar = (props) => {
             <Menu>
               <MenuButton
                 as={IconButton}
-                icon={<HamburgerIcon />}
-                variant="outline"
                 aria-label="Options"
+                icon={<HamburgerIcon boxSize={6} />}
+                colorScheme="white"
               />
               <MenuList>
                 <Link to="/" passHref>
                   <MenuItem as={ChakraLink}>About</MenuItem>
                 </Link>
-                <Link to="/works" passHref>
-                  <MenuItem as={ChakraLink}>Works</MenuItem>
+                <Link to="/test" passHref>
+                  <MenuItem as={ChakraLink}>Test</MenuItem>
                 </Link>
               </MenuList>
             </Menu>

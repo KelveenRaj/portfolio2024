@@ -7,13 +7,13 @@ const Logo = () => {
     <Link to="/">
       <a>
         <Text
-          color={"gray.800"}
+          color={"white"}
           fontFamily='"Poppins", sans-serif'
           fontWeight="bold"
           fontSize={"18px"}
           ml={3}
         >
-          {data.name}
+          {data.logo}
         </Text>
       </a>
     </Link>

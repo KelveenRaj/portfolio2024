@@ -8,7 +8,13 @@ const MainLayout = () => {
   const currentPath = window.location.pathname;
 
   return (
-    <Box as="main" pb={8}>
+    <Box
+      as="main"
+      pb={8}
+      maxW={"36rem"}
+      marginLeft={"auto"}
+      marginRight={"auto"}
+    >
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{data.name}</title>
