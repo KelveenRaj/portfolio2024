@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom";
 import { Link as ChakraLink } from "@chakra-ui/react";
 
-const LinkItem = ({ href, children }) => {
+const LinkStyle = {
+  padding: 2,
+  fontFamily: '"Poppins", sans-serif',
+  textDecoration: 'none'
+};
+
+const LinkItem = ({ href, isActive, children }) => {
   return (
     <Link to={href}>
-      <ChakraLink p={2} color={"white"}>
+      <ChakraLink
+        style={LinkStyle}
+        color={isActive !== "/" ? "#319795" : "#FFFFFF"}
+      >
         {children}
       </ChakraLink>
     </Link>

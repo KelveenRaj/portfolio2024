@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   Container,
   Box,
@@ -10,66 +10,78 @@ import {
   MenuList,
   MenuButton,
   IconButton,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import Logo from "./Logo";
 import LinkItem from "./LinkItem";
+import { useEffect, useState } from "react";
 
-const Navbar = (props) => {
-  const { path } = props;
+const BoxStyles = {
+  position: "fixed",
+  as: "nav",
+  width: "100%",
+  maxWidth: "36rem",
+  padding: "2rem 1rem",
+  background: "blackAlpha.50",
+  backdropFilter: "blur(10px)",
+  zIndex: 1,
+};
+const ContainerStyles = {
+  display: "flex",
+  padding: 2,
+  maxWidth: "container.md",
+  wrap: "wrap",
+  align: "center",
+  justify: "space-between",
+};
+
+const Navbar = ({ ...props }) => {
+  const location = useLocation();
+  const { pathname } = location;
+  const [isLargerThanMd] = useMediaQuery("(min-width: 48em)");
+  const [isActive, setIsActive] = useState("");
+
+  useEffect(() => {
+    setIsActive(pathname);
+  }, [pathname]);
+
   return (
-    <Box
-      as="header"
-      w="100%"
-      bg={"blackAlpha.50"}
-      padding={"4rem 1rem"}
-      style={{ backdropFilter: "blur(10px)" }}
-      zIndex={1}
-      {...props}
-    >
-      <Container
-        display="flex"
-        p={2}
-        maxW="container.md"
-        wrap="wrap"
-        align="center"
-        justify="space-between"
-      >
-        <Flex align="center" mr={5}>
-          <Logo />
+    <Box style={BoxStyles} {...props}>
+      <Container style={ContainerStyles}>
+        <Flex align="center" justify="space-between" width="100%">
+          <Flex align="center">
+            <Logo isActive={isActive} />
+          </Flex>
+
+          {isLargerThanMd ? (
+            <Stack direction="row" spacing={4}>
+              <Box flex={1} />
+              <LinkItem href="/test" isActive={isActive}>Contact</LinkItem>
+            </Stack>
+          ) : (
+            <Box flex={1} align="right">
+              <Box ml={2} display={{ base: "inline-block", md: "none" }}>
+                <Menu>
+                  <MenuButton
+                    as={IconButton}
+                    aria-label="Options"
+                    icon={<HamburgerIcon boxSize={6} />}
+                    colorScheme="white"
+                  />
+                  <MenuList>
+                    <Link to="/" passHref>
+                      <MenuItem as={ChakraLink}>About</MenuItem>
+                    </Link>
+                    <Link to="/test" passHref>
+                      <MenuItem as={ChakraLink}>Test</MenuItem>
+                    </Link>
+                  </MenuList>
+                </Menu>
+              </Box>
+            </Box>
+          )}
         </Flex>
-        <Stack
-          direction={{ base: "column", md: "row" }}
-          display={{ base: "none", md: "flex" }}
-          width={{ base: "full", md: "auto" }}
-          alignItems="center"
-          flexGrow={1}
-          mt={{ base: 4, nmd: 0 }}
-        >
-          <LinkItem href="/test" path={path}>
-            Test
-          </LinkItem>
-        </Stack>
-        <Box flex={1} align="right">
-          <Box ml={2} display={{ base: "inline-block", md: "none" }}>
-            <Menu>
-              <MenuButton
-                as={IconButton}
-                aria-label="Options"
-                icon={<HamburgerIcon boxSize={6} />}
-                colorScheme="white"
-              />
-              <MenuList>
-                <Link to="/" passHref>
-                  <MenuItem as={ChakraLink}>About</MenuItem>
-                </Link>
-                <Link to="/test" passHref>
-                  <MenuItem as={ChakraLink}>Test</MenuItem>
-                </Link>
-              </MenuList>
-            </Menu>
-          </Box>
-        </Box>
       </Container>
     </Box>
   );

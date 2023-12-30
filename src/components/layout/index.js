@@ -5,8 +5,6 @@ import data from "../../utils/constants.json";
 import Navbar from "../Navbar";
 
 const MainLayout = () => {
-  const currentPath = window.location.pathname;
-
   return (
     <Box
       as="main"
@@ -20,9 +18,9 @@ const MainLayout = () => {
         <title>{data.name}</title>
       </Helmet>
 
-      <Navbar path={currentPath} />
+      <Navbar />
 
-      <Container maxW="container.md" pt={14}>
+      <Container maxW="container.md" pt={108}>
         <Outlet />
       </Container>
     </Box>
