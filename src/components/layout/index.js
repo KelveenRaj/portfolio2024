@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { Box, Container } from "@chakra-ui/react";
 import data from "../../utils/constants.json";
-import Navbar from "../Navbar";
+import Navbar from "./Navbar";
 
 const MainLayout = () => {
   return (

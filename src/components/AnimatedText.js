@@ -39,7 +39,7 @@ const AnimatedText = ({ text, fontSize, fontWeight }) => {
   const renderHighlightedText = () => {
     const highlightRules = [
       { chars: ["'"], className: "yellow" },
-      { chars: [".", ","], className: "pink" },
+      { chars: [".", ",", "!"], className: "pink" },
     ];
 
     return currentText.split("").map((char, i) => {

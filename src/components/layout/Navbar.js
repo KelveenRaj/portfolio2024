@@ -57,7 +57,9 @@ const Navbar = ({ ...props }) => {
           {isLargerThanMd ? (
             <Stack direction="row" spacing={4}>
               <Box flex={1} />
-              <LinkItem href="/test" isActive={isActive}>Contact</LinkItem>
+              <LinkItem href="/test" isActive={isActive}>
+                Contact
+              </LinkItem>
             </Stack>
           ) : (
             <Box flex={1} align="right">
