@@ -1,4 +1,5 @@
 import { Box, Stack, Text, Heading, Flex, Link } from "@chakra-ui/react";
+import { ChevronRightIcon } from "@chakra-ui/icons";
 
 const Experience = ({ data }) => {
   return (
@@ -29,9 +30,11 @@ const Experience = ({ data }) => {
                 fontWeight: "bold",
                 color: "#64ffda",
                 textDecoration: "none",
+                alignItems: "center",
               }}
             >
               {item.company}
+              <ChevronRightIcon />
             </Link>
             <Text
               style={{

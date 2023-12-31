@@ -20,9 +20,11 @@ const About = () => {
         {/* Heading */}
         <Stack>
           <AnimatedText text={data.hello} fontSize="36px" />
-          <Text fontSize={"18px"} fontWeight={600} color="#8892B0">
-            {data.info}
-          </Text>
+          <Section delay={1.3}>
+            <Text fontSize={"18px"} fontWeight={600} color="#8892B0">
+              {data.info}
+            </Text>
+          </Section>
         </Stack>
 
         {/* Experience */}
