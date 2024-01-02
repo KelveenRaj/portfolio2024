@@ -1,9 +1,18 @@
-import { Box, Stack, Text, Heading, Flex, Link } from "@chakra-ui/react";
+import {
+  Box,
+  Stack,
+  Text,
+  Heading,
+  Flex,
+  Link,
+  HStack,
+  Tag,
+} from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 
 const Experience = ({ data }) => {
   return (
-    <Stack mt={10}>
+    <Stack>
       <Box>
         <Heading
           style={{
@@ -51,6 +60,13 @@ const Experience = ({ data }) => {
             <Text style={{ textAlign: "justify", color: "#8892B0" }}>
               {item.desc}
             </Text>
+            <HStack marginTop="2" spacing="2">
+              {item.stack.map((stack) => (
+                <Tag key={stack} variant="outline">
+                  {stack}
+                </Tag>
+              ))}
+            </HStack>
           </Flex>
         ))}
       </Box>

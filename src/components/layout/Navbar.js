@@ -57,7 +57,7 @@ const Navbar = ({ ...props }) => {
           {isLargerThanMd ? (
             <Stack direction="row" spacing={4}>
               <Box flex={1} />
-              <LinkItem href="/test" isActive={isActive}>
+              <LinkItem href="/contact" isActive={isActive}>
                 Contact
               </LinkItem>
             </Stack>
@@ -75,8 +75,8 @@ const Navbar = ({ ...props }) => {
                     <Link to="/" passHref>
                       <MenuItem as={ChakraLink}>About</MenuItem>
                     </Link>
-                    <Link to="/test" passHref>
-                      <MenuItem as={ChakraLink}>Test</MenuItem>
+                    <Link to="/contact" passHref>
+                      <MenuItem as={ChakraLink}>Contact</MenuItem>
                     </Link>
                   </MenuList>
                 </Menu>
