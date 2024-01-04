@@ -1,6 +1,10 @@
 import { Container, Box, Stack, Text, HStack } from "@chakra-ui/react";
 import data from "../../utils/constants.json";
-import { GithubIcon, LinkedinIcon } from "../../components/CustomIcons";
+import {
+  GithubIcon,
+  LinkedinIcon,
+  InstagramIcon,
+} from "../../components/CustomIcons";
 import Section from "../../components/Section";
 import AnimatedText from "../../components/AnimatedText";
 import Experience from "../../components/Experience";
@@ -29,8 +33,9 @@ const About = () => {
           {/* Social Links */}
           <Section delay={1.6}>
             <HStack spacing={4} align="center" justify="center">
-              <GithubIcon />
               <LinkedinIcon />
+              <GithubIcon />
+              <InstagramIcon />
             </HStack>
           </Section>
 

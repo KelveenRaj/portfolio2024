@@ -17,16 +17,27 @@ const Experience = ({ data }) => {
         <Heading
           style={{
             display: "flex",
-            left: 0,
-            fontSize: "26px",
+            fontSize: "18px",
             color: "#ccd6f6",
-            paddingBottom: 10,
+            paddingBottom: "18px",
           }}
         >
           Experience
         </Heading>
         {data.experience.map((item, index) => (
           <Flex key={index} mb={4} flexDirection="column">
+            <Text
+              style={{
+                display: "flex",
+                left: 0,
+                fontSize: "14px",
+                fontWeight: "bold",
+                color: "#8892B0",
+                marginBottom: 1,
+              }}
+            >
+              {item.year}
+            </Text>
             <Link
               href={item.url}
               isExternal
@@ -35,7 +46,7 @@ const Experience = ({ data }) => {
               style={{
                 display: "flex",
                 left: 0,
-                fontSize: "22px",
+                fontSize: "20px",
                 fontWeight: "bold",
                 color: "#64ffda",
                 textDecoration: "none",
@@ -48,21 +59,44 @@ const Experience = ({ data }) => {
             <Text
               style={{
                 display: "flex",
+                flexDirection: "column",
                 left: 0,
-                fontSize: "16px",
-                color: "gray.500",
+                fontSize: "18px",
+                color: "#8892B0",
                 marginBottom: 1,
                 fontWeight: "bold",
               }}
             >
-              {item.year}
+              {item.role.map((role, index) => (
+                <span
+                  key={index}
+                  style={{
+                    color: index === 0 ? "white" : null,
+                    display: "flex",
+                  }}
+                >
+                  {role}
+                </span>
+              ))}
             </Text>
-            <Text style={{ textAlign: "justify", color: "#8892B0" }}>
+
+            <Text
+              style={{
+                textAlign: "justify",
+                color: "#8892B0",
+                fontSize: "16px",
+              }}
+            >
               {item.desc}
             </Text>
-            <HStack marginTop="2" spacing="2">
+            <HStack marginTop="2" spacing="2" paddingBottom="18px">
               {item.stack.map((stack) => (
-                <Tag key={stack} variant="outline">
+                <Tag
+                  key={stack}
+                  variant="outline"
+                  fontSize="14px"
+                  color="#64ffda"
+                >
                   {stack}
                 </Tag>
               ))}

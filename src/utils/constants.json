@@ -6,18 +6,20 @@
   "role": "Fullstack Developer",
   "experience": [
     {
-      "company": "Finexus",
-      "url": "https://www.finexusgroup.com/",
-      "year": "July - September 2021",
-      "desc": "I started my professional career as an intern at Finexus, I worked on a cheque clearing application where I need to fix bugs and add new functionalities based on user request.",
-      "stack": ["Java", "SQL"]
-    },
-    {
       "company": "AIA Singapore",
       "url": "https://www.aia.com.sg/en/index",
-      "year": "January 2022 - Present",
+      "role": ["Senior Analyst", "Analyst"],
+      "year": "Jan 2022 - Present",
       "desc": "Im currently working as a full-stack developer at AIA Singapore.",
       "stack": ["React", "Node.js", "Jest", "Azure DevOps"]
+    },
+    {
+      "company": "Finexus",
+      "url": "https://www.finexusgroup.com/",
+      "role": ["Intern"],
+      "year": "July - Sept 2021",
+      "desc": "I developed and maintained code for in-house cheque clearing application based on user request.",
+      "stack": ["Java", "SQL"]
     }
   ]
 }

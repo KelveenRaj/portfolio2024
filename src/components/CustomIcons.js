@@ -1,6 +1,6 @@
 import React from "react";
 import { Icon } from "@chakra-ui/react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const styles = {
   icon: {
@@ -37,3 +37,14 @@ export const LinkedinIcon = () => (
     sx={styles.icon}
   />
 );
+
+export const InstagramIcon = () => (
+  <Icon
+    as={FaInstagram}
+    boxSize={8}
+    color="#8892B0"
+    _hover={{ color: "#64ffda", animation: "bounce 1s infinite" }}
+    sx={styles.icon}
+  />
+);
+
