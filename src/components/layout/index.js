@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { Box, Container } from "@chakra-ui/react";
 import data from "../../utils/constants.json";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const MainLayout = () => {
   return (
@@ -23,6 +24,8 @@ const MainLayout = () => {
       <Container maxW="container.md" pt={108}>
         <Outlet />
       </Container>
+
+      <Footer text={data.footer}/>
     </Box>
   );
 };

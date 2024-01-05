@@ -25,7 +25,7 @@ const About = () => {
           {/* Heading */}
           <AnimatedText text={data.hello} fontSize="36px" />
           <Section delay={1.3}>
-            <Text fontSize={"18px"} fontWeight={600} color="#8892B0">
+            <Text fontSize={"16px"} fontWeight={500} color="#8892B0">
               {data.info}
             </Text>
           </Section>

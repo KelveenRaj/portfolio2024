@@ -2,7 +2,7 @@
   "logo": "KR",
   "name": "Kelveen Raj",
   "hello": "Hello! I'm Kelveen",
-  "info": "I'm a full-stack developer based in Kuala Lumpur, Malaysia",
+  "info": "I'm a full-stack developer based in Kuala Lumpur, Malaysia. I primarily specialize in building client-side web applications, with a bit of DevOps on the side.",
   "role": "Fullstack Developer",
   "experience": [
     {
@@ -10,7 +10,7 @@
       "url": "https://www.aia.com.sg/en/index",
       "role": ["Senior Analyst", "Analyst"],
       "year": "Jan 2022 - Present",
-      "desc": "Im currently working as a full-stack developer at AIA Singapore.",
+      "desc": "I'm currently working as a full-stack developer at AIA Singapore.",
       "stack": ["React", "Node.js", "Jest", "Azure DevOps"]
     },
     {
@@ -18,8 +18,9 @@
       "url": "https://www.finexusgroup.com/",
       "role": ["Intern"],
       "year": "July - Sept 2021",
-      "desc": "I developed and maintained code for in-house cheque clearing application based on user request.",
+      "desc": "I developed and maintained code for an in-house cheque clearing application based on business request.",
       "stack": ["Java", "SQL"]
     }
-  ]
+  ],
+  "footer": "© Kelveen Raj 2024"
 }

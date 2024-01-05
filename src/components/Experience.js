@@ -18,6 +18,7 @@ const Experience = ({ data }) => {
           style={{
             display: "flex",
             fontSize: "18px",
+            fontWeight: 500,
             color: "#ccd6f6",
             paddingBottom: "18px",
           }}
@@ -31,7 +32,7 @@ const Experience = ({ data }) => {
                 display: "flex",
                 left: 0,
                 fontSize: "14px",
-                fontWeight: "bold",
+                fontWeight: 500,
                 color: "#8892B0",
                 marginBottom: 1,
               }}
@@ -47,7 +48,7 @@ const Experience = ({ data }) => {
                 display: "flex",
                 left: 0,
                 fontSize: "20px",
-                fontWeight: "bold",
+                fontWeight: 500,
                 color: "#64ffda",
                 textDecoration: "none",
                 alignItems: "center",
@@ -64,7 +65,7 @@ const Experience = ({ data }) => {
                 fontSize: "18px",
                 color: "#8892B0",
                 marginBottom: 1,
-                fontWeight: "bold",
+                fontWeight: 500,
               }}
             >
               {item.role.map((role, index) => (
@@ -82,9 +83,10 @@ const Experience = ({ data }) => {
 
             <Text
               style={{
-                textAlign: "justify",
+                textAlign: "left",
                 color: "#8892B0",
                 fontSize: "16px",
+                fontWeight: 500,
               }}
             >
               {item.desc}

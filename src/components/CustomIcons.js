@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon } from "@chakra-ui/react";
+import { Icon, Link } from "@chakra-ui/react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const styles = {
@@ -18,33 +18,34 @@ const styles = {
   },
 };
 
+const AnimatedIcon = ({ icon, link }) => {
+  return (
+    <Link href={link} isExternal>
+      <Icon
+        as={icon}
+        boxSize={8}
+        color="#8892B0"
+        _hover={{ color: "#64ffda", animation: "bounce 1s infinite" }}
+        sx={styles.icon}
+      />
+    </Link>
+  );
+};
+
 export const GithubIcon = () => (
-  <Icon
-    as={FaGithub}
-    boxSize={8}
-    color="#8892B0"
-    _hover={{ color: "#64ffda", animation: "bounce 1s infinite" }}
-    sx={styles.icon}
-  />
+  <AnimatedIcon icon={FaGithub} link="https://github.com/KelveenRaj" />
 );
 
 export const LinkedinIcon = () => (
-  <Icon
-    as={FaLinkedin}
-    boxSize={8}
-    color="#8892B0"
-    _hover={{ color: "#64ffda", animation: "bounce 1s infinite" }}
-    sx={styles.icon}
+  <AnimatedIcon
+    icon={FaLinkedin}
+    link="https://www.linkedin.com/in/kelveenraj/"
   />
 );
 
 export const InstagramIcon = () => (
-  <Icon
-    as={FaInstagram}
-    boxSize={8}
-    color="#8892B0"
-    _hover={{ color: "#64ffda", animation: "bounce 1s infinite" }}
-    sx={styles.icon}
+  <AnimatedIcon
+    icon={FaInstagram}
+    link="https://www.instagram.com/kelveen_raj/"
   />
 );
-
