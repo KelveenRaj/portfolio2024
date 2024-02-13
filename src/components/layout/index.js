@@ -25,7 +25,7 @@ const MainLayout = () => {
         <Outlet />
       </Container>
 
-      <Footer text={data.footer}/>
+      <Footer footerText={data.footer} tradeMark={data.tm}/>
     </Box>
   );
 };

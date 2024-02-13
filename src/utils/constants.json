@@ -22,5 +22,6 @@
       "stack": ["Java", "SQL"]
     }
   ],
-  "footer": "© Kelveen Raj 2024"
+  "footer": "Built with React and Chakra UI",
+  "tm": "© Kelveen Raj 2024"
 }
